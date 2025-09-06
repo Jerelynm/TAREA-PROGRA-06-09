@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inscripciones</h1>
+        <nav>
+            <ul>
+                <li><a href="inscripciones.html">Inscripciones</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="estudiantes.html">Estudiantes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulario de Inscripción</h2>
+        <form action="#" method="post">
+            <label for="studentName">Nombre del Estudiante:</label><br>
+            <input type="text" id="studentName" name="studentName" required><br><br>
+
+            <label for="course">Curso:</label><br>
+            <select id="course" name="course" required>
+                <option value="">Seleccione un curso</option>
+                <option value="curso1">PROGRAMACIÓN</option>
+                <option value="curso2">CALCULO</option>
+                <option value="curso3">MICROECONOMIA</option>
+                <option value="curso4">ESTADISTICA</option>
+                <option value="curso5">FISICA</option>
+            </select><br><br>
+
+            <input type="submit" value="Inscribirse">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sistema de Inscripciones</p>
+    </footer>
+</html>
