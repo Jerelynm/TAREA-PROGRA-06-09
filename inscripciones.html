@@ -1,42 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripciones</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Inscripciones</h1>
+        <h1>Formulario de Inscripción</h1>
         <nav>
             <ul>
-                <li><a href="inscripciones.html">Inscripciones</a></li>
+                <li><a href="home.html">Inicio</a></li>
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="estudiantes.html">Estudiantes</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h2>Formulario de Inscripción</h2>
-        <form action="#" method="post">
-            <label for="studentName">Nombre del Estudiante:</label><br>
-            <input type="text" id="studentName" name="studentName" required><br><br>
+        <form action="procesar.php" method="post">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-            <label for="course">Curso:</label><br>
-            <select id="course" name="course" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso" required>
                 <option value="">Seleccione un curso</option>
-                <option value="curso1">PROGRAMACIÓN</option>
-                <option value="curso2">CALCULO</option>
-                <option value="curso3">MICROECONOMIA</option>
-                <option value="curso4">ESTADISTICA</option>
-                <option value="curso5">FISICA</option>
-            </select><br><br>
+                <option value="html">HTML Básico</option>
+                <option value="css">CSS Intermedio</option>
+                <option value="js">JavaScript Avanzado</option>
+            </select>
 
-            <input type="submit" value="Inscribirse">
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+            <button type="submit">Enviar</button>
         </form>
     </main>
+
     <footer>
-        <p>&copy; 2024 Sistema de Inscripciones</p>
+        <p>&copy; 2025 Sistema de Inscripciones</p>
     </footer>
+</body>
 </html>
